@@ -1,4 +1,6 @@
 require("gert.remap")
+require("gert.bootstrap")
+require("gert.packer")
 vim.wo.relativenumber = true
 vim.o.tabstop  = 4
 vim.o.shiftwidth = 2
