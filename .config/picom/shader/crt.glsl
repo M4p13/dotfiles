@@ -12,15 +12,15 @@ uniform float sc_intensity = 0.05; // Intensity of the scanline effect
 
 uniform bool grid = false; // Whether to also apply scanlines to x axis or not
 
-uniform int distortion_offset = 3; // Pixel offset for red/blue distortion
+uniform int distortion_offset = 32; // Pixel offset for red/blue distortion
 
 uniform int downscale_factor = 1; // How many pixels of the window
                                   // make an actual "pixel" (or block)
 
-uniform float sph_distance = 100; // Distance from the theoretical sphere 
+uniform float sph_distance = 800; // Distance from the theoretical sphere 
                                   // we use for our curvature transform
 
-uniform float curvature = 0.001; // How much the window should "curve" 
+uniform float curvature = 0.4; // How much the window should "curve" 
 
 uniform float shadow_cutoff = 0.9; // How "early" the shadow starts affecting 
                                  // pixels close to the edges
