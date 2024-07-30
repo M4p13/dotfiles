@@ -201,7 +201,7 @@ exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
 #--window-shader-fg ~/.config/picom/shader/ct.glsl
 
 
-bindsym $mod+d exec --no-startup-id rofi --combi-modi window#drun#ssh -show combi -theme arthur -font \\"firacode 12\\" 
+bindsym $mod+d exec --no-startup-id rofi -dpi 1 --combi-modi window#drun#ssh -show combi -theme arthur -font \\"firacode 12\\" 
 
 # set primary Rosé Pine colorscheme colors
 set $base           #191724
