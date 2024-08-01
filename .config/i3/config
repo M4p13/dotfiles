@@ -183,9 +183,6 @@ bindsym $mod+r mode "resize"
 bindsym $mod+l exec "~/.config/i3/locker.sh"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command i3blocks
-}
 
 default_border none
 default_floating_border none
@@ -228,3 +225,21 @@ client.unfocused         $text     $base $text  $overlay   $overlay
 client.urgent            $text     $base $text  $love      $love
 client.placeholder       $base     $base $text  $overlay   $overlay
 client.background        $base
+
+bar { 
+  status_command i3blocks 
+  padding 2px 12px 2px 12px 
+  tray_output primary
+  separator_symbol |
+  colors {
+    background $base
+    statusline $rose
+    separator $love
+    focused_workspace  $gold $subtle $rose 
+    active_workspace   #333333 #5f676a #ffffff
+    inactive_workspace $subtle $rose $base
+  }
+}
+
+exec --no-startup-id i3-msg 'exec kitty tmux;workspace 2; exec firefox; workspace 9; exec keepassxc; workspace 1'
+

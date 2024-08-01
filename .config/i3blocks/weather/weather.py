@@ -6,7 +6,7 @@ import xml.etree.ElementTree as ET
 import requests
 
 # Forecast URL.
-YR_URL = "https://www.yr.no/place/Sverige/%C3%96sterg%C3%B6tland/Link%C3%B6ping/forecast.xml"
+YR_URL = "https://www.yr.no/place/Karksi-Nuia/%C3%96sterg%C3%B6tland/Link%C3%B6ping/forecast.xml"
 
 # Good to have data + funky emojicons.
 FORECAST_CACHE_FILE = os.path.dirname(os.path.realpath(__file__)) + "/forecast.xml"
