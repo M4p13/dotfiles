@@ -14,20 +14,13 @@ lspconfig.lua_ls.setup {
 	},
 }
 
-lspconfig.tsserver.setup {
-	settings = {
-		inlayHints="all"
-	}
-}
+-- lspconfig.tsserver.setup {
+-- 	settings = {
+-- 		inlayHints="all"
+-- 	}, 
+-- }
 
 
-local default_setup = function(server_name)
-	require('lspconfig')[server_name].setup({})
-end
-
-
-
-local svelte = function()
 lspconfig.svelte.setup {
   on_attach = function(client)
     vim.api.nvim_create_autocmd("BufWritePost", {
@@ -38,6 +31,15 @@ lspconfig.svelte.setup {
     })
   end
 }
+
+vim.api.nvim_create_autocmd({"BufWrite"}, {
+  pattern = {"+page.server.ts", "+page.ts", "+layout.server.ts", "+layout.ts"},
+  command = "LspRestart svelte",
+})
+
+
+local default_setup = function(server_name)
+	require('lspconfig')[server_name].setup({})
 end
 
 local inlay = function ()
@@ -49,6 +51,7 @@ local inlay = function ()
 			else
 				print("no inlay available")
 			end
+
 		end
 	}
 end
@@ -69,7 +72,6 @@ require('mason-lspconfig').setup({
   },
   handlers = {
     default_setup,
-    svelte,
     inlay
   },
   automatic_installation = true
