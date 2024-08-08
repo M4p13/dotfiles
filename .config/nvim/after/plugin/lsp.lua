@@ -59,6 +59,7 @@ require('mason').setup({})
 require('mason-lspconfig').setup({
   ensure_installed = {
     'svelte',
+    'gopls',
     'prismals',
     'tsserver',
     'html',

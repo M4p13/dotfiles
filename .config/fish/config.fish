@@ -8,4 +8,7 @@ function fish_greeting
 end
 
 set -gx TERM screen-256color-bce;
+set -gx GOPATH "$HOME/go"
+set -gx PATH "$GOPATH/bin:$PATH"
+
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
