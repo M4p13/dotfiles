@@ -4,7 +4,7 @@
 #color=#C9E3DB
 
 [weather]
-min_width=1000
+min_width=200
 align=center
 command=curl -Ss 'https://wttr.in/Karksi-Nuia?0&T&Q&format=2'
 interval=1200

@@ -61,7 +61,7 @@ require('mason-lspconfig').setup({
     'svelte',
     'gopls',
     'prismals',
-    'tsserver',
+    'ts_ls',
     'html',
     'lua_ls',
     'eslint',

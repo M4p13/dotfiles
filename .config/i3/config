@@ -89,7 +89,7 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+h split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+#bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -179,7 +179,7 @@ mode "resize" {
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
 }
-
+#bindsym $mod+v exec xclip -o
 bindsym $mod+r mode "resize"
 bindsym $mod+l exec "~/.config/i3/locker.sh"
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -190,7 +190,7 @@ default_floating_border none
 gaps outer 6
 for_window [class=".*"] border pixel 0 
 
-exec_always xautolock -time 5 -locker "~/.config/i3/locker.sh"
+#exec_always xautolock -time 5 -locker "~/.config/i3/locker.sh"
 
 
 exec_always --no-startup-id feh --bg-scale ~/wallpapers/3.jpg

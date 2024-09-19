@@ -9,3 +9,4 @@ vim.o.smartindent = true
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = "number"
 vim.opt.colorcolumn = "79"
+vim.opt.scrolloff=30
